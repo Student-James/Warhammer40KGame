@@ -17,10 +17,12 @@ public class Unit {
     int leadership;
     int save;
     ArrayList<Weapon> weapon;
+    boolean charge;
 
 
 
-    public  Unit(String name,int power, int size, int move, int weaponSkill, int ballisticSkill, int strength,int toughness,int wounds,int attacks,int leadership,int save,ArrayList<Weapon> weapon){
+
+    public  Unit(String name, int power, int size, int move, int weaponSkill, int ballisticSkill, int strength, int toughness, int wounds, int attacks, int leadership, int save, ArrayList<Weapon> weapon, boolean charge){
         this.name=name;
         this.size = size;
         this.power = power;
@@ -34,6 +36,7 @@ public class Unit {
         this.leadership=leadership;
         this.save=save;
         this.weapon = new ArrayList<Weapon>();
+        this.charge=charge;
     }
 
     public String getName(){
@@ -154,5 +157,13 @@ public class Unit {
     public void setSave(int save) {
 
         this.save = save;
+    }
+
+    public boolean isCharge() {
+        return charge;
+    }
+
+    public void setCharge(boolean charge) {
+        this.charge = charge;
     }
 }

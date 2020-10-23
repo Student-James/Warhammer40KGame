@@ -24,15 +24,16 @@ public class Main {
     infiltratorSquadWeapons.add(fragGrenade);
     infiltratorSquadWeapons.add(krakGrenade);
 
-    Unit infiltratorSquad = new Unit("Infiltrator Squad",5,5,6,3,2,7,4,2,2,7,3,infiltratorSquadWeapons);
+    Unit infiltratorSquad = new Unit("Infiltrator Squad",5,5,6,3,2,7,4,2,2,7,3,infiltratorSquadWeapons,false);
 
     ArrayList<Unit> myArmy = new ArrayList<Unit>();
     myArmy.add(infiltratorSquad);
 
     Scanner userInput = new Scanner(System.in);
-    System.out.println("We shall start our game. Have all of the command phase requirements been met?\n if so please type in 'begin' and we start the game: ");
+    System.out.println("*************************************************************************************");
+    System.out.println("We shall start our game. Have all of the command phase requirements been met?\n If so please enter and we can start the game: ");
      String beginGame = userInput.nextLine();
-     if(beginGame.equals("begin"));
+
     DiceRoll diceRoll = new DiceRoll();
     int movePhaseDice = diceRoll.DiceRoll();
     MovePhase movePhase =new MovePhase();
